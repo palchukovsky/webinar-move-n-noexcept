@@ -44,37 +44,37 @@ Tracer makeNrvoMediumTracer(const char *name, const int foo) {
 void test(const int foo) {
 
     {
-        std::cout << "Example 1 \"RVO simple example\":" << std::endl;
+        std::cout << "Example 1 \"Return Value Optimization (RVO) simple example\":" << std::endl;
 
-        Tracer tracer = makeRvoSimpleTracer("RVO simple tracker");
+        const Tracer tracer = makeRvoSimpleTracer("RVO simple tracker");
     }
 
     {
         std::cout << std::endl;
-        std::cout << "Example 2.1 \"NRVO simple example\":" << std::endl;
+        std::cout << "Example 2.1 \"Named Return Value Optimization (NRVO) simple example\":" << std::endl;
 
-        Tracer tracer2 = makeNrvoSimpleTracer("NRVO simple tracker");
+        const Tracer tracer2 = makeNrvoSimpleTracer("NRVO simple tracker");
     }
     
     {
         std::cout << std::endl;
-        std::cout << "Example 2.2 \"NRVO simple example with CONST\":" << std::endl;
+        std::cout << "Example 2.2 \"Named Return Value Optimization (NRVO) simple example with CONST\":" << std::endl;
 
-        Tracer tracer2 = makeNrvoSimpleConstTracer("NRVO simple with CONST tracker");
+        const Tracer tracer2 = makeNrvoSimpleConstTracer("NRVO simple with CONST tracker");
     }
 
     {
         std::cout << std::endl;
-        std::cout << "Example 3 \"RVO medium\":" << std::endl;
+        std::cout << "Example 3 \"Return Value Optimization (RVO) medium\":" << std::endl;
 
-        Tracer tracer3 = makeRvoMediumTracer("RVO medium tracer", foo);
+        const Tracer tracer3 = makeRvoMediumTracer("RVO medium tracer", foo);
     }
 
     {
         std::cout << std::endl;
-        std::cout << "Example 4 \"NRVO medium\":" << std::endl;
+        std::cout << "Example 4 \"Named Return Value Optimization (NRVO) medium\":" << std::endl;
 
-        Tracer tracer4 = makeNrvoMediumTracer("NRVO medium tracer", foo);
+        const Tracer tracer4 = makeNrvoMediumTracer("NRVO medium tracer", foo);
     }
 
     std::cout << std::endl;

@@ -16,7 +16,7 @@ void test() {
     std::cout << "Start of the main" << std::endl;
 
     // Example 1 - we want to move, not to copy and not reference!
-    Tracer veryBigObject{"Some very very very long string"}; // 10 GB
+    const Tracer veryBigObject{"Some very very very long string"}; // 10 GB
     sendValueToRemoveHost(veryBigObject);
 
     // Example 2 - we want to move, not to copy!
@@ -25,7 +25,7 @@ void test() {
         std::stringstream valueName;
         valueName << "value for vector at " << i;
 
-        Tracer value{valueName.str()};
+        const Tracer value{valueName.str()};
 
         value.DoSomeAction();
 

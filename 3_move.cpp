@@ -97,7 +97,7 @@ void test(const int foo) {
 
         otherTracer = std::move(bigTracer); // maybe only 10 GB here
 
-        Tracer moveTracer = makeNrvoMediumTracer("moveTracer", foo);
+        const Tracer moveTracer = makeNrvoMediumTracer("moveTracer", foo);
     }
    
     std::cout << "In vector:" << std::endl;
